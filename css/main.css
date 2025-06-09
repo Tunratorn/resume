@@ -64,7 +64,7 @@
 }
 
 body {
-    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+    background: linear-gradient(112.1deg, #202639 11.4%, #3f4c77 70.2%);
     height: 100vh;
     background-attachment: fixed;
 }
@@ -134,6 +134,13 @@ main::-webkit-scrollbar {
     border-radius: 50px;
     border: none;
     font-size: 12px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    gap: 5px;
 }
 
 .btn-title-profile:hover {
