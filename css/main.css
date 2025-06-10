@@ -69,12 +69,12 @@ body {
     background-attachment: fixed;
 }
 
-footer {
+/* footer {
     background: rgb(46 58 99);
     height: 50px;
     position: absolute;
     bottom: 0;
-}
+} */
 
 .container-fluid {
     height: 100vh;
@@ -87,7 +87,7 @@ main::-webkit-scrollbar {
 .contant {
     border-radius: 6px;
     box-shadow: 5px 5px 10px #00000029;
-    height: 100px;
+    height: auto;
     background: rgb(46 58 99);
     color: #fff;
 }
@@ -191,6 +191,69 @@ main::-webkit-scrollbar {
 
 .area-contact {
     min-height: 110px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #c552f6;
+  top: 8px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 0 2rem;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+}
+
+.timeline-item-left {
+    left: 0;
+    text-align: end;
+}
+
+.timeline-item-right {
+    left: 50%;
+}
+
+.timeline-item-right::after {
+    left: -7px;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #c552f6;
+    border-radius: 50%;
+    top: 6px;
+    right: -5px;
+}
+
+.timeline-date {
+    color: #c552f6;
+}
+
+.timeline-detail {
+    color: #848eb1;
+    font-size: 14px;
 }
 
 /* Fade-in animation */
