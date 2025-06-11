@@ -84,7 +84,7 @@ main::-webkit-scrollbar {
     display: none;
 }
 
-.contant {
+.main-content {
     border-radius: 6px;
     box-shadow: 5px 5px 10px #00000029;
     height: auto;
@@ -118,7 +118,7 @@ main::-webkit-scrollbar {
 }
 
 .font-title-detail {
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: clamp(13px, 2vw, 15px);
     text-indent: 50px;
 }
 
@@ -253,8 +253,50 @@ main::-webkit-scrollbar {
 
 .timeline-detail {
     color: #848eb1;
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
 }
+
+.timeline-title-content {
+    font-size: clamp(17px, 2.5vw, 1.3rem);
+}
+
+.content {
+    margin-bottom: 6rem;
+}
+
+.group-item-subject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.text-subject {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+}
+
+#main_contact {
+    overflow: auto;
+}
+
+.frame-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame-profile::-webkit-scrollbar {
+    display: none;
+}
+
+.img-subject-experience {
+    width: 300px;
+}
+
+.detail-subject {
+    font-size: clamp(14px, 2vw, 16px);
+}
+
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -282,5 +324,87 @@ main::-webkit-scrollbar {
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+
+/* resonsive css  */
+@media (max-width: 1550px) {
+    .group-item-subject {
+        flex-flow: column-reverse;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 1399px) {
+    .frame-profile {
+        display: block;
+        overflow: auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1199px) {
+    #main_contact {
+        overflow: unset;
+    }
+
+    .main-content {
+        border-radius: 6px;
+        box-shadow: unset;
+        height: auto;
+        background: none;
+        color: #fff;    
+    }
+
+    .frame-profile {
+        display: flex;
+        height: auto;
+        padding-top: clamp(2rem, 5vw, 4rem) !important;
+    }
+
+    .img-subject-experience {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+   .timeline::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background-color: #c552f6;
+        top: 8px;
+        bottom: 0;
+        left: 0;
+        margin-left: -2px;
+    } 
+
+    .timeline-item-right {
+        left: 0;
+    }
+
+    .timeline-item {
+        position: relative;
+        width: 100%;
+        margin-bottom: 2.5rem;
+    }
+
+    .timeline-item-left {
+        left: 0;
+        text-align: start;
+    }
+
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background-color: #c552f6;
+        border-radius: 50%;
+        top: 6px;
+        right: 0;
+        left: -7px;
     }
 }
