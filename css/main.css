@@ -210,6 +210,9 @@ main::-webkit-scrollbar {
   bottom: 0;
   left: 50%;
   margin-left: -2px;
+  transition: 1s;
+  height: 0;
+  height: 100%;
 }
 
 .timeline-item {
